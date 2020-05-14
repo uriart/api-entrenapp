@@ -13,7 +13,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 @Entity
-@Table(name="user")
+@Table(name="usuario")
 public class User {
 	
 	@Id
