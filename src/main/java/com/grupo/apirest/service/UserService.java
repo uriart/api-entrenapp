@@ -2,8 +2,11 @@ package com.grupo.apirest.service;
 
 import java.util.List;
 
+import org.springframework.transaction.annotation.Transactional;
+
 import com.grupo.apirest.entity.User;
 
+@Transactional
 public interface UserService {
 	
 	public List<User> findAll();

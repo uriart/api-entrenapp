@@ -73,16 +73,12 @@ public class UserRestController {
 	/*Este método se hará cuando por una petición DELETE (como indica la anotación) se llame a la url + id del usuario
 	http://127.0.0.1:8080/api/users/1  */
 	@DeleteMapping("users/{userId}")
-	public String deteteUser(@PathVariable int userId) {
-		
+	public String deleteUser(@PathVariable int userId) {
 		User user = userService.findById(userId);
-		
 		if(user == null) {
 			throw new RuntimeException("User id not found -"+userId);
 		}
-		
 		userService.deleteById(userId);
-		
 		//Esto método, recibira el id de un usuario por URL y se borrará de la bd.
 		return "Deleted user id - "+userId;
 	}
