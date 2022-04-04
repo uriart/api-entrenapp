@@ -38,7 +38,6 @@ public class UserRestController {
 	@GetMapping("/users/{userId}")
 	public User getUser(@PathVariable int userId){
 		User user = userService.findById(userId);
-		
 		if(user == null) {
 			throw new RuntimeException("User id not found -"+userId);
 		}
@@ -50,8 +49,6 @@ public class UserRestController {
 	http://127.0.0.1:8080/api/users/  */
 	@PostMapping("/users")
 	public User addUser(@RequestBody User user) {
-		user.setId(0);
-		
 		//Este metodo guardará al usuario enviado
 		userService.save(user);
 		
