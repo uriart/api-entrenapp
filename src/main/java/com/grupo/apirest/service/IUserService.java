@@ -4,16 +4,16 @@ import java.util.List;
 
 import org.springframework.transaction.annotation.Transactional;
 
-import com.grupo.apirest.entity.User;
+import com.grupo.apirest.entity.UserModel;
 
 @Transactional
 public interface IUserService {
 	
-	public List<User> findAll();
+	List<UserModel> findAll();
 	
-	public User findById(int id);
+	UserModel findById(int id);
 	
-	public void save(User user);
+	void save(UserModel user);
 	
-	public void deleteById(int id);
+	void deleteById(int id);
 }

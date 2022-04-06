@@ -1,6 +1,7 @@
-drop table if exists usuario;
+drop table if exists USUARIO;
+drop table if exists TMARCAS;
 
-create table usuario (
+create table USUARIO (
     id serial primary key,
     email varchar(250) not null,
     password varchar(250) not null,
@@ -8,16 +9,19 @@ create table usuario (
     updated_at date not null
 );
 
-insert into usuario
-(id, email, password, created_at, updated_at) values
-(1, 'asdass@hotmail.com', 'paswordddd', '2020-01-01', '2020-03-19'),
-(2, 'mar@gmail.com', 'paswordddd2', '2020-01-01', '2020-03-19'),
-(3, 'mar@gmail.com', 'paswordddd2', '2020-01-01', '2020-03-19'),
-(4, 'mar@gmail.com', 'paswordddd2', '2020-01-01', '2020-03-19'),
-(5, 'mar@gmail.com', 'paswordddd2', '2020-01-01', '2020-03-19'),
-(6, 'mar@gmail.com', 'paswordddd2', '2020-01-01', '2020-03-19'),
-(7, 'mar@gmail.com', 'paswordddd2', '2020-01-01', '2020-03-19'),
-(8, 'mar@gmail.com', 'paswordddd2', '2020-01-01', '2020-03-19'),
-(9, 'mar@gmail.com', 'paswordddd2', '2020-01-01', '2020-03-19'),
-(10, 'mar@gmail.com', 'paswordddd2', '2020-01-01', '2020-03-19'),
-(11, 'mar@gmail.com', 'paswordddd2', '2020-01-01', '2020-03-19');
+create table TMARCAS (
+    USUARIO varchar(200) primary key,
+    CO_HOMBRO CHAR(1) not null,
+    CO_ESPALDA1 CHAR(1) not null,
+    CO_ESPALDA2 CHAR(1) not null,
+    PESO_MUERTO INTEGER not null,
+    PRESS_BANCA INTEGER not null,
+    SENTADILLA INTEGER not null,
+    FECHA_INICIO date not null
+);
+
+insert into TMARCAS
+(USUARIO, CO_HOMBRO, CO_ESPALDA1, CO_ESPALDA2, PESO_MUERTO, PRESS_BANCA, SENTADILLA, FECHA_INICIO)
+values ('USER3', 'E', 'D', 'R', 160, 110, 130, '07/04/2022');
+
+SELECT * FROM TMARCAS;

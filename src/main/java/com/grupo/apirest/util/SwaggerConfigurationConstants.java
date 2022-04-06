@@ -9,4 +9,7 @@ public class SwaggerConfigurationConstants {
     public static final String UPDATE_USUARIO_DESCRIPCION = "Actualiza un usuario";
     public static final String GET_USUARIO_DESCRIPCION = "Obtiene la información de un usuario";
     public static final String DELETE_USUARIO_DESCRIPCION = "Elimina un usuario";
+    public static final String POST_MARCAS_USER = "Guarda las marcas de un usuario";
+    public static final String GET_MARCAS_USER = "Obtiene las marcas de un usuario";
+    public static final String GET_PROGRAMA = "Genera el prograam de un usuario";
 }

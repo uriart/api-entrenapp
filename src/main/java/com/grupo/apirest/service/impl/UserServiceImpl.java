@@ -1,33 +1,34 @@
-package com.grupo.apirest.service;
+package com.grupo.apirest.service.impl;
 
 import java.util.List;
 
+import com.grupo.apirest.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.grupo.apirest.dao.IUserDAO;
-import com.grupo.apirest.entity.User;
+import com.grupo.apirest.entity.UserModel;
 
 @Service
-public class IUserServiceImpl implements IUserService {
+public class UserServiceImpl implements IUserService {
 
 	@Autowired
 	private IUserDAO userDAO;
 	
 	@Override
-	public List<User> findAll() {
-		List<User> listUsers= userDAO.findAll();
+	public List<UserModel> findAll() {
+		List<UserModel> listUsers= userDAO.findAll();
 		return listUsers;
 	}
 
 	@Override
-	public User findById(int id) {
-		User user = userDAO.findById(id);
+	public UserModel findById(int id) {
+		UserModel user = userDAO.findById(id);
 		return user;
 	}
 
 	@Override
-	public void save(User user) {
+	public void save(UserModel user) {
 		userDAO.save(user);
 
 	}
