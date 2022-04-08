@@ -8,7 +8,7 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name="usuario")
+@Table(name="USUARIO")
 public @Data
 class UserModel {
 	

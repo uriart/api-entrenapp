@@ -1,16 +1,15 @@
 package com.grupo.apirest.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.grupo.apirest.enums.EjerciciosEnum;
+import com.grupo.apirest.util.ConstantsUtils;
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name="MARCAS")
+@Table(name="TMARCAS")
 public @Data
 class MarcasModel {
 
@@ -21,16 +20,19 @@ class MarcasModel {
     @Column(name="CO_HOMBRO")
     private String codigoHombro;
 
+    @Transient
     private String descripcionHombro;
 
     @Column(name="CO_ESPALDA1")
     private String codigoEspalda1;
 
+    @Transient
     private String descripcionEspalda1;
 
     @Column(name="CO_ESPALDA2")
     private String codigoEspalda2;
 
+    @Transient
     private String descripcionEspalda2;
 
     @Column(name="PESO_MUERTO")
@@ -43,19 +45,20 @@ class MarcasModel {
     private Integer sentadilla;
 
     @Column(name="FECHA_INICIO")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = ConstantsUtils.FORMATO_FECHA)
     private Date fechaInicio;
 
     public MarcasModel() {}
 
     public String getDescripcionHombro (){
-        return EjerciciosEnum.valueOf(this.codigoHombro).name();
+        return EjerciciosEnum.fromCode(this.codigoHombro).toString();
     }
 
     public String getDescripcionEspalda1 (){
-        return EjerciciosEnum.valueOf(this.codigoEspalda1).name();
+        return EjerciciosEnum.fromCode(this.codigoEspalda1).toString();
     }
 
     public String getDescripcionEspalda2 (){
-        return EjerciciosEnum.valueOf(this.codigoEspalda2).name();
+        return EjerciciosEnum.fromCode(this.codigoEspalda2).toString();
     }
 }

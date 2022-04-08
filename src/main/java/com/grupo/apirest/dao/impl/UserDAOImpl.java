@@ -22,7 +22,7 @@ public class UserDAOImpl implements IUserDAO {
 	public List<UserModel> findAll() {
 		Session currentSession = entityManager.unwrap(Session.class);
 
-		Query<UserModel> theQuery = currentSession.createQuery("from User", UserModel.class);
+		Query<UserModel> theQuery = currentSession.createQuery("from UserModel", UserModel.class);
 		
 		List<UserModel> users = theQuery.getResultList();
 		

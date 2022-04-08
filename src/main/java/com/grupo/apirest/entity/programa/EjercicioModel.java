@@ -5,5 +5,5 @@ import lombok.Data;
 public @Data
 class EjercicioModel {
     private String nombreEjercicio;
-    private PesoRepsModel[] pesoReps;
+    private SeriesModel[] series;
 }

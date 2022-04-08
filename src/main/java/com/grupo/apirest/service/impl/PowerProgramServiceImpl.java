@@ -26,7 +26,6 @@ public class PowerProgramServiceImpl implements IPowerProgramService {
     @Override
     public ProgramaPowerliftingModel getProgram(String user) {
         MarcasModel marcas = getMarcasByUser(user);
-        //TODO impl generar programa
         return new ProgramaPowerliftingModel(marcas);
     }
 
