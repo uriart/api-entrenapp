@@ -1,7 +1,7 @@
 package com.grupo.apirest.dao.impl;
 
 import com.grupo.apirest.dao.IPowerProgramDAO;
-import com.grupo.apirest.entity.MarcasModel;
+import com.grupo.apirest.entity.powerlifting.MarcasModel;
 import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -24,7 +24,8 @@ public class PowerProgramDAOImpl implements IPowerProgramDAO {
     @Override
     public MarcasModel findByUser(String user) {
         Session currentSession = entityManager.unwrap(Session.class);
-        return currentSession.get(MarcasModel.class, user);
+        MarcasModel result = currentSession.get(MarcasModel.class, user);
+        return result;
     }
 
 }

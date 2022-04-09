@@ -1,4 +1,4 @@
-package com.grupo.apirest.entity.programa;
+package com.grupo.apirest.entity.powerlifting;
 
 import lombok.Data;
 

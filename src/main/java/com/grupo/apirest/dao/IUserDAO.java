@@ -2,16 +2,16 @@ package com.grupo.apirest.dao;
 
 import java.util.List;
 
-import com.grupo.apirest.entity.UserModel;
+import com.grupo.apirest.entity.administracion.UserModel;
 
 
 public interface IUserDAO {
 	
-	public List<UserModel> findAll();
+	List<UserModel> findAll();
 	
-	public UserModel findById(int id);
+	UserModel findById(int id);
 	
-	public void save(UserModel user);
+	void save(UserModel user);
 	
-	public void deleteById(int id);
+	void deleteById(int id);
 }

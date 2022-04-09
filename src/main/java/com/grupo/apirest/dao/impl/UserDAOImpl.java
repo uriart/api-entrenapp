@@ -10,7 +10,7 @@ import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.grupo.apirest.entity.UserModel;
+import com.grupo.apirest.entity.administracion.UserModel;
 
 @Repository
 public class UserDAOImpl implements IUserDAO {

@@ -1,18 +1,20 @@
 package com.grupo.apirest.controller;
 
-import com.grupo.apirest.entity.MarcasModel;
-import com.grupo.apirest.entity.programa.ProgramaPowerliftingModel;
+import com.grupo.apirest.entity.powerlifting.MarcasModel;
+import com.grupo.apirest.entity.powerlifting.ProgramaPowerliftingModel;
 import com.grupo.apirest.service.IPowerProgramService;
 import com.grupo.apirest.util.SwaggerConfigurationConstants;
 import io.swagger.annotations.ApiOperation;
+import javassist.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletResponse;
 
 @RestController
-public class PowerProgramRestController extends APIBaseRestController{
+@RequestMapping(path = "/powerlifting", produces = MediaType.APPLICATION_JSON_VALUE)
+public class PowerProgramRestController {
 
     @Autowired
     private IPowerProgramService powerProgramService;
@@ -25,8 +27,9 @@ public class PowerProgramRestController extends APIBaseRestController{
 
     @ApiOperation(value = SwaggerConfigurationConstants.GET_MARCAS_USER)
     @GetMapping("/marcas")
-    public MarcasModel getMarcas(String user){
-        return powerProgramService.getMarcasByUser(user);
+    public MarcasModel getMarcas(String user) throws NotFoundException {
+        MarcasModel marcas = powerProgramService.getMarcasByUser(user);
+        return marcas;
     }
 
     @ApiOperation(value = SwaggerConfigurationConstants.GET_PROGRAMA)

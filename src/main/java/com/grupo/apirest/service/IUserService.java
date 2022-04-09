@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.transaction.annotation.Transactional;
 
-import com.grupo.apirest.entity.UserModel;
+import com.grupo.apirest.entity.administracion.UserModel;
 
 @Transactional
 public interface IUserService {

@@ -1,7 +1,7 @@
 package com.grupo.apirest.service;
 
-import com.grupo.apirest.entity.MarcasModel;
-import com.grupo.apirest.entity.programa.ProgramaPowerliftingModel;
+import com.grupo.apirest.entity.powerlifting.MarcasModel;
+import com.grupo.apirest.entity.powerlifting.ProgramaPowerliftingModel;
 import org.springframework.transaction.annotation.Transactional;
 
 @Transactional

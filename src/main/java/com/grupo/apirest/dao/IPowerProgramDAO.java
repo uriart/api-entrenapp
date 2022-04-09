@@ -1,6 +1,6 @@
 package com.grupo.apirest.dao;
 
-import com.grupo.apirest.entity.MarcasModel;
+import com.grupo.apirest.entity.powerlifting.MarcasModel;
 
 public interface IPowerProgramDAO {
 

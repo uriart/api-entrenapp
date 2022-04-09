@@ -1,8 +1,8 @@
 package com.grupo.apirest.service.impl;
 
 import com.grupo.apirest.dao.IPowerProgramDAO;
-import com.grupo.apirest.entity.MarcasModel;
-import com.grupo.apirest.entity.programa.ProgramaPowerliftingModel;
+import com.grupo.apirest.entity.powerlifting.MarcasModel;
+import com.grupo.apirest.entity.powerlifting.ProgramaPowerliftingModel;
 import com.grupo.apirest.service.IPowerProgramService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

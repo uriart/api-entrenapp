@@ -1,15 +1,16 @@
 package com.grupo.apirest.service.impl;
 
-import java.util.List;
-
+import com.grupo.apirest.dao.IUserDAO;
+import com.grupo.apirest.entity.administracion.UserModel;
 import com.grupo.apirest.service.IUserService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.grupo.apirest.dao.IUserDAO;
-import com.grupo.apirest.entity.UserModel;
+import java.util.List;
 
 @Service
+@Slf4j
 public class UserServiceImpl implements IUserService {
 
 	@Autowired
@@ -29,8 +30,8 @@ public class UserServiceImpl implements IUserService {
 
 	@Override
 	public void save(UserModel user) {
+		log.info("Usuario {} eliminado", user.getName());
 		userDAO.save(user);
-
 	}
 
 	@Override

@@ -1,6 +1,5 @@
-package com.grupo.apirest.entity.programa;
+package com.grupo.apirest.entity.powerlifting;
 
-import com.grupo.apirest.entity.MarcasModel;
 import com.grupo.apirest.enums.EjerciciosEnum;
 import lombok.Data;
 

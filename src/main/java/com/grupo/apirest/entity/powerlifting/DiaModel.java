@@ -1,4 +1,4 @@
-package com.grupo.apirest.entity.programa;
+package com.grupo.apirest.entity.powerlifting;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.grupo.apirest.util.ConstantsUtils;
