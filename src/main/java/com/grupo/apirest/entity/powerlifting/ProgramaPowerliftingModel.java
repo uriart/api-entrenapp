@@ -2,8 +2,10 @@ package com.grupo.apirest.entity.powerlifting;
 
 import com.grupo.apirest.enums.EjerciciosEnum;
 import lombok.Data;
+import sun.jvm.hotspot.gc.z.ZForwardingEntry;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -300,31 +302,30 @@ class ProgramaPowerliftingModel {
 
     private EjercicioModel crearEjercicio(String codigoEjercicio, Integer[] pesos, String[] reps, Integer maxima){
         EjercicioModel ejercicio = new EjercicioModel();
-        ArrayList<SeriesModel> listaPesoReps = new ArrayList<>();
+        ArrayList<SeriesModel> listaSeries = new ArrayList<>();
         ejercicio.setNombreEjercicio(EjerciciosEnum.fromCode(codigoEjercicio).toString());
-        for (Integer i = 0; i < pesos.length; i++) {
-            SeriesModel pesoReps = new SeriesModel();
-            if(null != pesos[i]){
-                pesoReps.setPeso(calcularPeso(maxima, pesos[i]));
+
+        for (Integer i = 0; i < reps.length; i++) {
+            SeriesModel serie = new SeriesModel();
+            serie.setRepeticiones(" "+reps[i]);
+            if(!Arrays.asList(pesos).isEmpty()){
+                serie.setPeso(calcularPeso(maxima, pesos[i]));
             }
-            if(null != reps[i]){
-                pesoReps.setRepeticiones(" "+reps[i]);
-            }
-            listaPesoReps.add(pesoReps);
+            listaSeries.add(serie);
         }
-        ejercicio.setSeries(listaPesoReps.toArray(new SeriesModel[listaPesoReps.size()]));
+        ejercicio.setSeries(listaSeries.toArray(new SeriesModel[listaSeries.size()]));
         return ejercicio;
     }
 
     private EjercicioModel filaInformativa(Integer maximaSentadilla, String numMensajeInfo){
         EjercicioModel ejercicio = new EjercicioModel();
         ejercicio.setNombreEjercicio("colspan5");
-        ArrayList<SeriesModel> listaPesoReps = new ArrayList<>();
-        SeriesModel pesoReps = new SeriesModel();
-        pesoReps.setPeso(calcularPeso(maximaSentadilla, 5));
-        pesoReps.setRepeticiones(numMensajeInfo);
-        listaPesoReps.add(pesoReps);
-        ejercicio.setSeries(listaPesoReps.toArray(new SeriesModel[1]));
+        ArrayList<SeriesModel> listaSeries = new ArrayList<>();
+        SeriesModel serie = new SeriesModel();
+        serie.setPeso(calcularPeso(maximaSentadilla, 5));
+        serie.setRepeticiones(numMensajeInfo);
+        listaSeries.add(serie);
+        ejercicio.setSeries(listaSeries.toArray(new SeriesModel[1]));
         return ejercicio;
     }
 

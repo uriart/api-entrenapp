@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @RestController
 @RequestMapping(path = "/powerlifting", produces = MediaType.APPLICATION_JSON_VALUE)
+@CrossOrigin(origins = "*")
 public class PowerProgramRestController {
 
     @Autowired
@@ -33,7 +34,7 @@ public class PowerProgramRestController {
     }
 
     @ApiOperation(value = SwaggerConfigurationConstants.GET_PROGRAMA)
-    @GetMapping("/program")
+    @GetMapping(value = "/program", produces = MediaType.APPLICATION_JSON_VALUE)
     public ProgramaPowerliftingModel getProgram(String user){
         return powerProgramService.getProgram(user);
     }
