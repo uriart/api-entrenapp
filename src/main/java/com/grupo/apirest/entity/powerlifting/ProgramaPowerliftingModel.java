@@ -2,7 +2,6 @@ package com.grupo.apirest.entity.powerlifting;
 
 import com.grupo.apirest.enums.EjerciciosEnum;
 import lombok.Data;
-import sun.jvm.hotspot.gc.z.ZForwardingEntry;
 
 import java.util.ArrayList;
 import java.util.Arrays;
