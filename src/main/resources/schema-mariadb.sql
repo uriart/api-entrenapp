@@ -1,27 +1,37 @@
-drop table if exists USUARIO;
-drop table if exists TMARCAS;
+drop table if exists "public".TMARCAS;
+drop table if exists "public".TNOTAS;
 
-create table USUARIO (
-    id serial primary key,
-    email varchar(250) not null,
-    password varchar(250) not null,
-    created_at date not null,
-    updated_at date not null
-);
-
-create table TMARCAS (
-    USUARIO varchar(200) primary key,
-    CO_HOMBRO CHAR(1) not null,
-    CO_ESPALDA1 CHAR(1) not null,
-    CO_ESPALDA2 CHAR(1) not null,
+create table "public".TMARCAS (
+    USUARIO VARCHAR(100) primary key,
+    CO_HOMBRO VARCHAR(5) not null,
+    CO_ESPALDA1 VARCHAR(5) not null,
+    CO_ESPALDA2 VARCHAR(5) not null,
     PESO_MUERTO INTEGER not null,
     PRESS_BANCA INTEGER not null,
     SENTADILLA INTEGER not null,
-    FECHA_INICIO date not null
+    FECHA_INICIO DATE not null
 );
 
-insert into TMARCAS
-(USUARIO, CO_HOMBRO, CO_ESPALDA1, CO_ESPALDA2, PESO_MUERTO, PRESS_BANCA, SENTADILLA, FECHA_INICIO)
-values ('USER3', 'E', 'D', 'R', 160, 110, 130, '07/04/2022');
+create table "public".TNOTAS (
+    ID serial primary key,
+    USUARIO varchar(100) not null,
+    NOTA text
+);
 
-SELECT * FROM TMARCAS;
+insert into "public".TNOTAS
+(ID, USUARIO, NOTA)
+values (3, 'USER2', 'Esta es la 1 nota de prueba para el usuario 2');
+
+
+
+
+
+
+
+
+SELECT * FROM "public".TNOTAS where id != '34';
+
+CREATE SEQUENCE "public".notas_id_seq START 1 INCREMENT 1;
+
+drop sequence "public".notas_id_seq;
+

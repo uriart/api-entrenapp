@@ -1,8 +1,8 @@
-package com.grupo.apirest.entity.powerlifting;
+package com.grupo.apirest.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.grupo.apirest.enums.EjerciciosEnum;
-import com.grupo.apirest.util.ConstantsUtils;
+import com.grupo.apirest.util.Constantes;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -11,7 +11,7 @@ import java.util.Date;
 @Entity
 @Table(name="TMARCAS")
 public @Data
-class MarcasModel {
+class Marcas {
 
     @Id
     @Column(name="USUARIO")
@@ -45,10 +45,10 @@ class MarcasModel {
     private Integer sentadilla;
 
     @Column(name="FECHA_INICIO")
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = ConstantsUtils.FORMATO_FECHA)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = Constantes.FORMATO_FECHA_LOCAL)
     private Date fechaInicio;
 
-    public MarcasModel() {}
+    public Marcas() {}
 
     public String getDescripcionHombro (){
         return EjerciciosEnum.fromCode(this.codigoHombro).toString();

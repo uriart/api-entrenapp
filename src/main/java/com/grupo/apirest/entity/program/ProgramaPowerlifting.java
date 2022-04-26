@@ -1,24 +1,22 @@
-package com.grupo.apirest.entity.powerlifting;
+package com.grupo.apirest.entity.program;
 
+import com.grupo.apirest.entity.Marcas;
 import com.grupo.apirest.enums.EjerciciosEnum;
 import lombok.Data;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Calendar;
-import java.util.Date;
+import java.util.*;
 
 public @Data
-class ProgramaPowerliftingModel {
+class ProgramaPowerlifting {
     private String titulo;
     private SemanaModel[] semana;
 
-    public ProgramaPowerliftingModel(){
+    public ProgramaPowerlifting(){
         super();
     }
 
     /* Constructor para generar el programa */
-    public ProgramaPowerliftingModel(MarcasModel marcas){
+    public ProgramaPowerlifting(Marcas marcas){
         ArrayList<SemanaModel> listaSemanas = new ArrayList<>();
         listaSemanas.add(crearSemana1(marcas));
         listaSemanas.add(crearSemana2(marcas));
@@ -30,7 +28,7 @@ class ProgramaPowerliftingModel {
         this.titulo = "Programa Powerlifting 6 semanas";
     }
 
-    private SemanaModel crearSemana1(MarcasModel marcas){
+    private SemanaModel crearSemana1(Marcas marcas){
         SemanaModel semana1 = new SemanaModel();
         semana1.setDescripcion("Acondicionamiento Muscular");
 
@@ -90,7 +88,7 @@ class ProgramaPowerliftingModel {
     }
 
 
-    private SemanaModel crearSemana2(MarcasModel marcas) {
+    private SemanaModel crearSemana2(Marcas marcas) {
         SemanaModel semana2 = new SemanaModel();
         semana2.setDescripcion("Hipertrofia Muscular");
         ArrayList<DiaModel> listaDias = new ArrayList<>();
@@ -152,7 +150,7 @@ class ProgramaPowerliftingModel {
         return semana2;
     }
 
-    private SemanaModel crearSemana3(MarcasModel marcas) {
+    private SemanaModel crearSemana3(Marcas marcas) {
         SemanaModel semana3 = new SemanaModel();
         semana3.setDescripcion("Max-OT");
         ArrayList<DiaModel> listaDias = new ArrayList<>();
@@ -198,7 +196,7 @@ class ProgramaPowerliftingModel {
         return semana3;
     }
 
-    private SemanaModel crearSemana4(MarcasModel marcas) {
+    private SemanaModel crearSemana4(Marcas marcas) {
         SemanaModel semana4 = new SemanaModel();
         semana4.setDescripcion("Aclimatación a altas cargas");
         ArrayList<DiaModel> listaDias = new ArrayList<>();
@@ -252,7 +250,7 @@ class ProgramaPowerliftingModel {
         return semana4;
     }
 
-    private SemanaModel crearSemana5(MarcasModel marcas) {
+    private SemanaModel crearSemana5(Marcas marcas) {
         SemanaModel semana5 = new SemanaModel();
         semana5.setDescripcion("Fuerza / Alta intensidad");
         ArrayList<DiaModel> listaDias = new ArrayList<>();
@@ -304,10 +302,12 @@ class ProgramaPowerliftingModel {
         ArrayList<SeriesModel> listaSeries = new ArrayList<>();
         ejercicio.setNombreEjercicio(EjerciciosEnum.fromCode(codigoEjercicio).toString());
 
-        for (Integer i = 0; i < reps.length; i++) {
+        for (Integer i = 0; i < 4; i++) {
             SeriesModel serie = new SeriesModel();
-            serie.setRepeticiones(" "+reps[i]);
-            if(!Arrays.asList(pesos).isEmpty()){
+            if(reps.length > i) {
+                serie.setRepeticiones(" " + reps[i]);
+            }
+            if(pesos.length > i){
                 serie.setPeso(calcularPeso(maxima, pesos[i]));
             }
             listaSeries.add(serie);
