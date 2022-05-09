@@ -58,4 +58,10 @@ public class PowerProgramRestController {
         powerProgramService.saveNota(nota);
     }
 
+    @ApiOperation("")
+    @DeleteMapping(value = "/deleteNota", produces = MediaType.APPLICATION_JSON_VALUE)
+    public void deleteNota(Long id){
+        powerProgramService.deleteNota(id);
+    }
+
 }

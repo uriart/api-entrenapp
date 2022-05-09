@@ -53,5 +53,10 @@ public class PowerProgramServiceImpl implements IPowerProgramService {
         powerProgramDAO.saveNota(nota);
     }
 
+    @Override
+    public void deleteNota(Long id) {
+        powerProgramDAO.deleteNota(id);
+    }
+
 
 }

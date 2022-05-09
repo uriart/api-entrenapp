@@ -18,4 +18,6 @@ public interface IPowerProgramDAO {
 
     void saveNota(Nota nota);
 
+    void deleteNota(Long id);
+
 }

@@ -20,16 +20,9 @@ create table "public".TNOTAS (
 
 insert into "public".TNOTAS
 (ID, USUARIO, NOTA)
-values (3, 'USER2', 'Esta es la 1 nota de prueba para el usuario 2');
+values (11, 'USER1', 'Esta es la 1 nota de prueba para el usuario 2');
 
-
-
-
-
-
-
-
-SELECT * FROM "public".TNOTAS where id != '34';
+SELECT * FROM "public".TNOTAS;
 
 CREATE SEQUENCE "public".notas_id_seq START 1 INCREMENT 1;
 

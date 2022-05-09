@@ -18,4 +18,5 @@ public interface IPowerProgramService {
 	List<Nota> getNotesByUser(String user);
 	Optional<Nota> getNoteById(Long id);
 	void saveNota(Nota nota);
+	void deleteNota(Long id);
 }

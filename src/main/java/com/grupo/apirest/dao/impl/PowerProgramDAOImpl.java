@@ -50,4 +50,9 @@ public class PowerProgramDAOImpl implements IPowerProgramDAO {
         powerProgramRepository.save(nota);
     }
 
+    @Override
+    public void deleteNota(Long id) {
+        powerProgramRepository.deleteById(id);
+    }
+
 }
