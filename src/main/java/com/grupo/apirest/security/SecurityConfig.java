@@ -37,11 +37,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     public void configure(HttpSecurity http) throws Exception {
-        http.cors().disable().csrf().disable().authorizeRequests()
+        http.cors().and().csrf().disable().authorizeRequests()
                 //.mvcMatchers("/api/public").permitAll()
                 .mvcMatchers("/powerlifting/**").authenticated()
                 .mvcMatchers("/private-scoped/**").hasAuthority("SCOPE_superadmin")
-                .and().cors()
                 .and().oauth2ResourceServer().jwt();
     }
 
