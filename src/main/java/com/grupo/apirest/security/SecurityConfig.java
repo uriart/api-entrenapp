@@ -41,6 +41,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 //.mvcMatchers("/api/public").permitAll()
                 .mvcMatchers("/powerlifting/**").authenticated()
                 .mvcMatchers("/private-scoped/**").hasAuthority("SCOPE_superadmin")
+                .and().cors()
                 .and().oauth2ResourceServer().jwt();
     }
 
