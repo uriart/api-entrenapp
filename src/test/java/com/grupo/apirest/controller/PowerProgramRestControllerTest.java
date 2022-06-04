@@ -35,7 +35,6 @@ class PowerProgramRestControllerTest extends BaseClassTest {
     void saveMarcas() {
         when(powerProgramDAO.saveMarcas(any(Marcas.class))).thenReturn(initMarcas());
         String url = "/powerlifting/marcas";
-
         try {
             mvc.perform(MockMvcRequestBuilders.post(url)
                 .content(mapToJson(initMarcas()))
@@ -50,7 +49,6 @@ class PowerProgramRestControllerTest extends BaseClassTest {
     void getMarcas() {
         when(powerProgramDAO.findByUser(eq(USUARIO))).thenReturn(initMarcas());
         String url = "/powerlifting/marcas";
-
         try {
             mvc.perform(MockMvcRequestBuilders.get(url)
                             .param("user", USUARIO)
@@ -65,7 +63,6 @@ class PowerProgramRestControllerTest extends BaseClassTest {
     void getProgram() {
         when(powerProgramDAO.findByUser(eq(USUARIO))).thenReturn(initMarcas());
         String url = "/powerlifting/program";
-
         try {
             mvc.perform(MockMvcRequestBuilders.get(url)
                             .param("user", USUARIO)
@@ -81,7 +78,6 @@ class PowerProgramRestControllerTest extends BaseClassTest {
     void getNotesByUser() {
         when(powerProgramDAO.getNotesByUser(eq(USUARIO))).thenReturn( new ArrayList<>());
         String url = "/powerlifting/getNotesByUser";
-
         try {
             mvc.perform(MockMvcRequestBuilders.get(url)
                             .param("user", USUARIO)
@@ -96,7 +92,6 @@ class PowerProgramRestControllerTest extends BaseClassTest {
     void getNoteById() {
         when(powerProgramDAO.getNoteById(eq(ID_NOTA))).thenReturn( null );
         String url = "/powerlifting/getNoteById";
-
         try {
             mvc.perform(MockMvcRequestBuilders.get(url)
                             .param("id", ID_NOTA.toString())
@@ -110,7 +105,6 @@ class PowerProgramRestControllerTest extends BaseClassTest {
     @Test
     void saveNota() {
         String url = "/powerlifting/saveNota";
-
         try {
             mvc.perform(MockMvcRequestBuilders.post(url)
                             .content(mapToJson(new Nota()))
@@ -124,7 +118,6 @@ class PowerProgramRestControllerTest extends BaseClassTest {
     @Test
     void deleteNota() {
         String url = "/powerlifting/deleteNota";
-
         try {
             mvc.perform(MockMvcRequestBuilders.delete(url)
                             .param("id", ID_NOTA.toString())
