@@ -1,0 +1,46 @@
+name: Deployment to heroku pipeline
+
+on:
+  push:
+    branches: 
+      - master
+      
+jobs:
+
+  avoid_reduncy:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Cancel Previous Redundant Builds
+        uses: styfle/cancel-workflow-action@0.9.1
+        with: 
+          access_token: ${{ github.token }}
+          
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Build
+        run: mvn compile
+          
+  test:
+    needs: [build]
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Test
+        run: mvn test
+          
+  deploy:
+    needs: [test]
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Deploy to Heroku
+        uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: ${{secrets.HEROKU_APP}}
+          heroku_email: ${{secrets.HEROKU_API_EMAIL}}
