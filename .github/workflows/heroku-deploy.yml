@@ -15,7 +15,7 @@ jobs:
         with: 
           access_token: ${{ github.token }}
           
-  build:
+  build_and_tests:
       runs-on: ubuntu-latest
       steps:
       - uses: actions/checkout@v3
@@ -28,7 +28,7 @@ jobs:
         run: mvn --batch-mode --update-snapshots package
           
   deploy:
-    needs: [build]
+    needs: [build_and_tests]
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
