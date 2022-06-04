@@ -101,7 +101,7 @@ class PowerProgramRestControllerTest extends BaseClassTest {
             mvc.perform(MockMvcRequestBuilders.get(url)
                             .param("id", ID_NOTA.toString())
                             .contentType(MediaType.APPLICATION_JSON))
-                    .andExpect(status().isOk());
+                    .andExpect(null);
         } catch (Exception e) {
             fail();
         }
