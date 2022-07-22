@@ -30,7 +30,7 @@ class PowerProgramRestControllerTest extends BaseClassTest {
     @MockBean
     private IPowerProgramDAO powerProgramDAO;
     private final String USUARIO = "user1";
-    private final Long ID_NOTA = new Long(1);
+    private final Long ID_NOTA = 1L;
     @Test
     void saveMarcas() {
         when(powerProgramDAO.saveMarcas(any(Marcas.class))).thenReturn(initMarcas());

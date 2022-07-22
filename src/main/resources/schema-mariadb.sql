@@ -28,3 +28,4 @@ CREATE SEQUENCE "public".notas_id_seq START 1 INCREMENT 1;
 
 drop sequence "public".notas_id_seq;
 
+SELECT * FROM "public".TMARCAS;

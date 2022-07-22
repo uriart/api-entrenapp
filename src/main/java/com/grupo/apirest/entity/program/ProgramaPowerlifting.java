@@ -24,7 +24,7 @@ class ProgramaPowerlifting {
         listaSemanas.add(crearSemana4(marcas));
         listaSemanas.add(crearSemana5(marcas));
         listaSemanas.add(crearSemana6());
-        this.semana = listaSemanas.toArray(new SemanaModel[listaSemanas.size()]);
+        this.semana = listaSemanas.toArray(new SemanaModel[0]);
         this.titulo = "Programa Powerlifting 6 semanas";
     }
 
@@ -40,7 +40,7 @@ class ProgramaPowerlifting {
         listaEjerciciosDia1.add(crearEjercicio(EjerciciosEnum.EJERCICIO_PESO_MUERTO.getCode(), new Integer[] {80,80}, new String [] {"x6","x6"}, marcas.getPesoMuerto()));
         listaEjerciciosDia1.add(crearEjercicio(EjerciciosEnum.EJERCICIO_OPCIONAL_1.getCode(), new Integer[0], new String [] {"x8-12","x8-12","x8-12"}, 0));
         listaEjerciciosDia1.add(crearEjercicio(EjerciciosEnum.EJERCICIO_OPCIONAL_2.getCode(), new Integer[0], new String [] {"x8-12","x8-12","x8-12"}, 0));
-        dia1.setEjercicios(listaEjerciciosDia1.toArray(new EjercicioModel[listaEjerciciosDia1.size()]));
+        dia1.setEjercicios(listaEjerciciosDia1.toArray(new EjercicioModel[0]));
         listaDias.add(dia1);
 
         DiaModel dia2= new DiaModel();
@@ -52,7 +52,7 @@ class ProgramaPowerlifting {
         listaEjerciciosDia2.add(crearEjercicio(marcas.getCodigoEspalda2(), new Integer[0], new String [] {"x12","x12","x10","x8"}, 0));
         listaEjerciciosDia2.add(crearEjercicio(EjerciciosEnum.EJERCICIO_OPCIONAL_1.getCode(), new Integer[0], new String [] {"x8-12","x8-12","x8-12"}, 0));
         listaEjerciciosDia2.add(crearEjercicio(EjerciciosEnum.EJERCICIO_OPCIONAL_2.getCode(), new Integer[0], new String [] {"x8-12","x8-12","x8-12"}, 0));
-        dia2.setEjercicios(listaEjerciciosDia2.toArray(new EjercicioModel[listaEjerciciosDia2.size()]));
+        dia2.setEjercicios(listaEjerciciosDia2.toArray(new EjercicioModel[0]));
         listaDias.add(dia2);
 
         DiaModel dia3 = new DiaModel();
@@ -68,7 +68,7 @@ class ProgramaPowerlifting {
         listaEjerciciosDia4.add(crearEjercicio(EjerciciosEnum.EJERCICIO_PESO_MUERTO.getCode(), new Integer [] {70,70}, new String [] {"x8","x8"}, marcas.getPesoMuerto()));
         listaEjerciciosDia4.add(crearEjercicio(EjerciciosEnum.EJERCICIO_OPCIONAL_1.getCode(),  new Integer[0], new String [] {"x8-12","x8-12","x8-12"}, 0));
         listaEjerciciosDia4.add(crearEjercicio(EjerciciosEnum.EJERCICIO_OPCIONAL_2.getCode(),  new Integer[0], new String [] {"x8-12","x8-12","x8-12"}, 0));
-        dia4.setEjercicios(listaEjerciciosDia4.toArray(new EjercicioModel[listaEjerciciosDia4.size()]));
+        dia4.setEjercicios(listaEjerciciosDia4.toArray(new EjercicioModel[0]));
         listaDias.add(dia4);
 
         DiaModel dia5 = new DiaModel();
@@ -80,10 +80,10 @@ class ProgramaPowerlifting {
         listaEjerciciosDia5.add(crearEjercicio(marcas.getCodigoEspalda2(), new Integer[0], new String [] {"x12","x12","x10","x8"}, 0));
         listaEjerciciosDia5.add(crearEjercicio(EjerciciosEnum.EJERCICIO_OPCIONAL_1.getCode(), new Integer[0], new String [] {"x8-12","x8-12","x8-12"}, 0));
         listaEjerciciosDia5.add(crearEjercicio(EjerciciosEnum.EJERCICIO_OPCIONAL_2.getCode(), new Integer[0], new String [] {"x8-12","x8-12","x8-12"}, 0));
-        dia5.setEjercicios(listaEjerciciosDia5.toArray(new EjercicioModel[listaEjerciciosDia5.size()]));
+        dia5.setEjercicios(listaEjerciciosDia5.toArray(new EjercicioModel[0]));
         listaDias.add(dia5);
 
-        semana1.setDias( listaDias.toArray(new DiaModel[listaDias.size()]) );
+        semana1.setDias( listaDias.toArray(new DiaModel[0]) );
         return semana1;
     }
 
@@ -101,7 +101,7 @@ class ProgramaPowerlifting {
         listaEjerciciosDia1.add(crearEjercicio(EjerciciosEnum.EJERCICIO_OPCIONAL_1.getCode(), new Integer[0], new String [] {"x8-12","x8-12","x8-12"}, 0));
         listaEjerciciosDia1.add(crearEjercicio(EjerciciosEnum.EJERCICIO_OPCIONAL_2.getCode(), new Integer[0], new String [] {"x8-12","x8-12","x8-12"}, 0));
 
-        dia1.setEjercicios(listaEjerciciosDia1.toArray(new EjercicioModel[listaEjerciciosDia1.size()]));
+        dia1.setEjercicios(listaEjerciciosDia1.toArray(new EjercicioModel[0]));
         listaDias.add(dia1);
 
         DiaModel dia2 = new DiaModel();
@@ -113,7 +113,7 @@ class ProgramaPowerlifting {
         listaEjerciciosDia2.add(crearEjercicio(marcas.getCodigoEspalda2(), new Integer[0], new String [] {"x10","x8","x6"}, 0));
         listaEjerciciosDia2.add(crearEjercicio(EjerciciosEnum.EJERCICIO_OPCIONAL_1.getCode(), new Integer[0], new String [] {"x8-12","x8-12","x8-12"}, 0));
         listaEjerciciosDia2.add(crearEjercicio(EjerciciosEnum.EJERCICIO_OPCIONAL_2.getCode(), new Integer[0], new String [] {"x8-12","x8-12","x8-12"}, 0));
-        dia2.setEjercicios(listaEjerciciosDia2.toArray(new EjercicioModel[listaEjerciciosDia2.size()]));
+        dia2.setEjercicios(listaEjerciciosDia2.toArray(new EjercicioModel[0]));
         listaDias.add(dia2);
 
         DiaModel dia3 = new DiaModel();
@@ -125,13 +125,13 @@ class ProgramaPowerlifting {
         listaEjerciciosDia3.add(crearEjercicio(EjerciciosEnum.EJERCICIO_OPCIONAL_1.getCode(), new Integer[0], new String [] {"x8-12","x8-12","x8-12"}, 0));
         listaEjerciciosDia3.add(crearEjercicio(EjerciciosEnum.EJERCICIO_OPCIONAL_2.getCode(), new Integer[0], new String [] {"x8-12","x8-12","x8-12"}, 0));
 
-        dia3.setEjercicios(listaEjerciciosDia3.toArray(new EjercicioModel[listaEjerciciosDia3.size()]));
+        dia3.setEjercicios(listaEjerciciosDia3.toArray(new EjercicioModel[0]));
         listaDias.add(dia3);
 
         DiaModel dia4 = new DiaModel();
         dia4.setFechaDia(sumarDias(marcas.getFechaInicio(), 11));
         //Idéntico al dia 2
-        dia4.setEjercicios(listaEjerciciosDia2.toArray(new EjercicioModel[listaEjerciciosDia2.size()]));
+        dia4.setEjercicios(listaEjerciciosDia2.toArray(new EjercicioModel[0]));
         listaDias.add(dia4);
 
         DiaModel dia5 = new DiaModel();
@@ -143,10 +143,10 @@ class ProgramaPowerlifting {
         listaEjerciciosDia5.add(crearEjercicio(marcas.getCodigoEspalda2(), new Integer[0], new String [] {"x10","x8","x6"}, 0));
         listaEjerciciosDia5.add(crearEjercicio(EjerciciosEnum.EJERCICIO_OPCIONAL_1.getCode(), new Integer[0], new String [] {"x8-12","x8-12","x8-12"}, 0));
         listaEjerciciosDia5.add(crearEjercicio(EjerciciosEnum.EJERCICIO_OPCIONAL_2.getCode(), new Integer[0], new String [] {"x8-12","x8-12","x8-12"}, 0));
-        dia5.setEjercicios(listaEjerciciosDia5.toArray(new EjercicioModel[listaEjerciciosDia5.size()]));
+        dia5.setEjercicios(listaEjerciciosDia5.toArray(new EjercicioModel[0]));
         listaDias.add(dia5);
 
-        semana2.setDias(listaDias.toArray(new DiaModel[listaDias.size()]));
+        semana2.setDias(listaDias.toArray(new DiaModel[0]));
         return semana2;
     }
 
@@ -161,7 +161,7 @@ class ProgramaPowerlifting {
         listaEjerciciosDia1.add(crearEjercicio(EjerciciosEnum.EJERCICIO_SENTADILLA.getCode(), new Integer[] {85, 85, 85}, new String [] {"x4-6","x4-6","x4-6"}, marcas.getSentadilla()));
         listaEjerciciosDia1.add(crearEjercicio(EjerciciosEnum.EJERCICIO_PESO_MUERTO.getCode(), new Integer[] {87, 87}, new String [] {"x3-6", "x3-6"}, marcas.getPesoMuerto()));
 
-        dia1.setEjercicios(listaEjerciciosDia1.toArray(new EjercicioModel[listaEjerciciosDia1.size()]));
+        dia1.setEjercicios(listaEjerciciosDia1.toArray(new EjercicioModel[0]));
         listaDias.add(dia1);
 
         DiaModel dia2 = new DiaModel();
@@ -171,7 +171,7 @@ class ProgramaPowerlifting {
         listaEjerciciosDia2.add(crearEjercicio(marcas.getCodigoEspalda1(), new Integer[0], new String [] {"x6","x6","x6"}, 0));
         listaEjerciciosDia2.add(crearEjercicio(marcas.getCodigoHombro(), new Integer[0], new String [] {"x6","x6","x6"}, 0));
         listaEjerciciosDia2.add(crearEjercicio(marcas.getCodigoEspalda2(), new Integer[0], new String [] {"x6","x6","x6"}, 0));
-        dia2.setEjercicios(listaEjerciciosDia2.toArray(new EjercicioModel[listaEjerciciosDia2.size()]));
+        dia2.setEjercicios(listaEjerciciosDia2.toArray(new EjercicioModel[0]));
         listaDias.add(dia2);
 
         DiaModel dia3 = new DiaModel();
@@ -179,7 +179,7 @@ class ProgramaPowerlifting {
         ArrayList<EjercicioModel> listaEjerciciosDia3 = new ArrayList<>();
         listaEjerciciosDia3.add(crearEjercicio(EjerciciosEnum.EJERCICIO_SENTADILLA.getCode(), new Integer[] {88}, new String [] {"x4-6"}, marcas.getSentadilla()));
         listaEjerciciosDia3.add(crearEjercicio(EjerciciosEnum.EJERCICIO_PESO_MUERTO.getCode(), new Integer[0], new String [] {"x8"}, marcas.getPesoMuerto()));
-        dia3.setEjercicios(listaEjerciciosDia3.toArray(new EjercicioModel[listaEjerciciosDia3.size()]));
+        dia3.setEjercicios(listaEjerciciosDia3.toArray(new EjercicioModel[0]));
         listaDias.add(dia3);
 
         DiaModel dia4 = new DiaModel();
@@ -189,10 +189,10 @@ class ProgramaPowerlifting {
         listaEjerciciosDia4.add(crearEjercicio(marcas.getCodigoEspalda1(), new Integer[0], new String [] {"x6","x6","x6"}, 0));
         listaEjerciciosDia4.add(crearEjercicio(marcas.getCodigoHombro(), new Integer[0], new String [] {"x6","x6","x6"}, 0));
         listaEjerciciosDia4.add(crearEjercicio(marcas.getCodigoEspalda2(), new Integer[0], new String [] {"x6","x6","x6"}, 0));
-        dia4.setEjercicios(listaEjerciciosDia4.toArray(new EjercicioModel[listaEjerciciosDia4.size()]));
+        dia4.setEjercicios(listaEjerciciosDia4.toArray(new EjercicioModel[0]));
         listaDias.add(dia4);
 
-        semana3.setDias(listaDias.toArray(new DiaModel[listaDias.size()]));
+        semana3.setDias(listaDias.toArray(new DiaModel[0]));
         return semana3;
     }
 
@@ -209,7 +209,7 @@ class ProgramaPowerlifting {
         listaEjerciciosDia1.add(crearEjercicio(EjerciciosEnum.EJERCICIO_OPCIONAL_1.getCode(), new Integer[0], new String [] {"x8-12","x8-12","x8-12"}, 0));
         listaEjerciciosDia1.add(crearEjercicio(EjerciciosEnum.EJERCICIO_OPCIONAL_2.getCode(), new Integer[0], new String [] {"x8-12","x8-12","x8-12"}, 0));
 
-        dia1.setEjercicios(listaEjerciciosDia1.toArray(new EjercicioModel[listaEjerciciosDia1.size()]));
+        dia1.setEjercicios(listaEjerciciosDia1.toArray(new EjercicioModel[0]));
         listaDias.add(dia1);
 
         DiaModel dia2 = new DiaModel();
@@ -221,7 +221,7 @@ class ProgramaPowerlifting {
         listaEjerciciosDia2.add(crearEjercicio(marcas.getCodigoEspalda2(), new Integer[0], new String [] {"x12","x12","x10","x8"}, 0));
         listaEjerciciosDia2.add(crearEjercicio(EjerciciosEnum.EJERCICIO_OPCIONAL_1.getCode(), new Integer[0], new String [] {"x8-12","x8-12","x8-12","x8-12"}, 0));
         listaEjerciciosDia2.add(crearEjercicio(EjerciciosEnum.EJERCICIO_OPCIONAL_2.getCode(), new Integer[0], new String [] {"x8-12","x8-12","x8-12","x8-12"}, 0));
-        dia2.setEjercicios(listaEjerciciosDia2.toArray(new EjercicioModel[listaEjerciciosDia2.size()]));
+        dia2.setEjercicios(listaEjerciciosDia2.toArray(new EjercicioModel[0]));
         listaDias.add(dia2);
 
         DiaModel dia3 = new DiaModel();
@@ -231,7 +231,7 @@ class ProgramaPowerlifting {
         listaEjerciciosDia3.add(crearEjercicio(EjerciciosEnum.EJERCICIO_PESO_MUERTO.getCode(),  new Integer[] {92, 95}, new String [] {"x3","x1-2"}, marcas.getPesoMuerto()));
         listaEjerciciosDia3.add(crearEjercicio(EjerciciosEnum.EJERCICIO_OPCIONAL_1.getCode(), new Integer[0], new String [] {"x8-12","x8-12","x8-12"}, 0));
         listaEjerciciosDia3.add(crearEjercicio(EjerciciosEnum.EJERCICIO_OPCIONAL_2.getCode(), new Integer[0], new String [] {"x8-12","x8-12","x8-12"}, 0));
-        dia3.setEjercicios(listaEjerciciosDia3.toArray(new EjercicioModel[listaEjerciciosDia3.size()]));
+        dia3.setEjercicios(listaEjerciciosDia3.toArray(new EjercicioModel[0]));
         listaDias.add(dia3);
 
         DiaModel dia4 = new DiaModel();
@@ -243,10 +243,10 @@ class ProgramaPowerlifting {
         listaEjerciciosDia4.add(crearEjercicio(marcas.getCodigoEspalda2(), new Integer[0], new String [] {"x12","x12","x10","x8"}, 0));
         listaEjerciciosDia4.add(crearEjercicio(EjerciciosEnum.EJERCICIO_OPCIONAL_1.getCode(), new Integer[0], new String [] {"x8-12","x8-12","x8-12"}, 0));
         listaEjerciciosDia4.add(crearEjercicio(EjerciciosEnum.EJERCICIO_OPCIONAL_2.getCode(), new Integer[0], new String [] {"x8-12","x8-12","x8-12"}, 0));
-        dia4.setEjercicios(listaEjerciciosDia4.toArray(new EjercicioModel[listaEjerciciosDia4.size()]));
+        dia4.setEjercicios(listaEjerciciosDia4.toArray(new EjercicioModel[0]));
         listaDias.add(dia4);
 
-        semana4.setDias(listaDias.toArray(new DiaModel[listaDias.size()]));
+        semana4.setDias(listaDias.toArray(new DiaModel[0]));
         return semana4;
     }
 
@@ -263,7 +263,7 @@ class ProgramaPowerlifting {
         listaEjerciciosDia1.add(crearEjercicio(EjerciciosEnum.EJERCICIO_OPCIONAL_TREN_INFERIOR.getCode(), new Integer[0], new String [] {"x8-12","x8-12","x8-12"}, 0));
         listaEjerciciosDia1.add(crearEjercicio(EjerciciosEnum.EJERCICIO_OPCIONAL_TREN_INFERIOR.getCode(), new Integer[0], new String [] {"x8-12","x8-12","x8-12"}, 0));
 
-        dia1.setEjercicios(listaEjerciciosDia1.toArray(new EjercicioModel[listaEjerciciosDia1.size()]));
+        dia1.setEjercicios(listaEjerciciosDia1.toArray(new EjercicioModel[0]));
         listaDias.add(dia1);
 
         DiaModel dia2 = new DiaModel();
@@ -275,7 +275,7 @@ class ProgramaPowerlifting {
         listaEjerciciosDia2.add(crearEjercicio(marcas.getCodigoEspalda2(), new Integer[0], new String [] {"x8","x6","x6"}, 0));
         listaEjerciciosDia2.add(crearEjercicio(EjerciciosEnum.EJERCICIO_OPCIONAL_1.getCode(), new Integer[0], new String [] {"x8-12","x8-12","x8-12"}, 0));
         listaEjerciciosDia2.add(crearEjercicio(EjerciciosEnum.EJERCICIO_OPCIONAL_2.getCode(), new Integer[0], new String [] {"x8-12","x8-12","x8-12"}, 0));
-        dia2.setEjercicios(listaEjerciciosDia2.toArray(new EjercicioModel[listaEjerciciosDia2.size()]));
+        dia2.setEjercicios(listaEjerciciosDia2.toArray(new EjercicioModel[0]));
         listaDias.add(dia2);
 
         DiaModel dia3 = new DiaModel();
@@ -284,9 +284,9 @@ class ProgramaPowerlifting {
         listaEjerciciosDia3.add(crearEjercicio(EjerciciosEnum.EJERCICIO_PESO_MUERTO.getCode(), new Integer[] {97}, new String [] {"x1-4"}, marcas.getPesoMuerto()));
         listaEjerciciosDia3.add(crearEjercicio(EjerciciosEnum.EJERCICIO_OPCIONAL_TREN_INFERIOR.getCode(), new Integer[0], new String [] {"x8-12","x8-12","x8-12"}, 0));
         listaEjerciciosDia3.add(crearEjercicio(EjerciciosEnum.EJERCICIO_OPCIONAL_TREN_INFERIOR.getCode(), new Integer[0], new String [] {"x8-12","x8-12","x8-12"}, 0));
-        dia3.setEjercicios(listaEjerciciosDia3.toArray(new EjercicioModel[listaEjerciciosDia3.size()]));
+        dia3.setEjercicios(listaEjerciciosDia3.toArray(new EjercicioModel[0]));
         listaDias.add(dia3);
-        semana5.setDias(listaDias.toArray(new DiaModel[listaDias.size()]));
+        semana5.setDias(listaDias.toArray(new DiaModel[0]));
 
         return semana5;
     }
@@ -312,7 +312,7 @@ class ProgramaPowerlifting {
             }
             listaSeries.add(serie);
         }
-        ejercicio.setSeries(listaSeries.toArray(new SeriesModel[listaSeries.size()]));
+        ejercicio.setSeries(listaSeries.toArray(new SeriesModel[0]));
         return ejercicio;
     }
 
