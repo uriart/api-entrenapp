@@ -36,7 +36,7 @@ public class PowerProgramRestController {
 
     @ApiOperation(value = SwaggerConfigurationConstants.GET_PROGRAMA)
     @GetMapping(value = "/program", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ProgramaPowerlifting getProgram(String user) throws NotFoundException {
+    public ProgramaPowerlifting getProgram(String user) {
         return powerProgramService.getProgram(user);
     }
 

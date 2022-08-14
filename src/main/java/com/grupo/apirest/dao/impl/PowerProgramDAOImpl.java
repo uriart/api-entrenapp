@@ -1,13 +1,11 @@
 package com.grupo.apirest.dao.impl;
 
 import com.grupo.apirest.dao.IPowerProgramDAO;
+import com.grupo.apirest.dao.repository.PowerProgramRepository;
 import com.grupo.apirest.entity.Marcas;
 import com.grupo.apirest.entity.Nota;
-import com.grupo.apirest.dao.repository.PowerProgramRepository;
 import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.context.config.ConfigDataResource;
-import org.springframework.boot.context.config.ConfigDataResourceNotFoundException;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;

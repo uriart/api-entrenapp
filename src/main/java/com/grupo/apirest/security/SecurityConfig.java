@@ -39,7 +39,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public void configure(HttpSecurity http) throws Exception {
         http.cors().and().csrf().disable().authorizeRequests()
                 //.mvcMatchers("/api/public").permitAll()
-                .mvcMatchers("/powerlifting/**").authenticated()
+                //.mvcMatchers("/powerlifting/**").authenticated()
                 .mvcMatchers("/private-scoped/**").hasAuthority("SCOPE_superadmin")
                 .and().cors()
                 .and().oauth2ResourceServer().jwt();

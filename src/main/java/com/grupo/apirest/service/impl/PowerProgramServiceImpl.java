@@ -4,6 +4,7 @@ import com.grupo.apirest.dao.IPowerProgramDAO;
 import com.grupo.apirest.entity.Marcas;
 import com.grupo.apirest.entity.Nota;
 import com.grupo.apirest.entity.program.ProgramaPowerlifting;
+import com.grupo.apirest.exception.ApiRequestException;
 import com.grupo.apirest.service.IPowerProgramService;
 import javassist.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,16 +26,13 @@ public class PowerProgramServiceImpl implements IPowerProgramService {
 
     @Override
     public Marcas getMarcasByUser(String user) {
-        return powerProgramDAO.findByUser(user);
+        return Optional.ofNullable(powerProgramDAO.findByUser(user))
+                .orElseThrow(() -> new ApiRequestException("No se encuentra el usuario " + user));
     }
 
     @Override
-    public ProgramaPowerlifting getProgram(String user) throws NotFoundException {
+    public ProgramaPowerlifting getProgram(String user){
         Marcas marcas = getMarcasByUser(user);
-        //Si no se encuentran marcas para el usuario throw not found exception
-        if(marcas == null) {
-            throw new NotFoundException("vacío");
-        }
         return new ProgramaPowerlifting(marcas);
     }
 

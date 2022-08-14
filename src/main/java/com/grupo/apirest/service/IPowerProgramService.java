@@ -3,7 +3,6 @@ package com.grupo.apirest.service;
 import com.grupo.apirest.entity.Marcas;
 import com.grupo.apirest.entity.Nota;
 import com.grupo.apirest.entity.program.ProgramaPowerlifting;
-import javassist.NotFoundException;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
@@ -14,7 +13,7 @@ public interface IPowerProgramService {
 
 	Marcas saveMarcas(Marcas marcas);
 	Marcas getMarcasByUser(String user);
-	ProgramaPowerlifting getProgram(String user) throws NotFoundException;
+	ProgramaPowerlifting getProgram(String user);
 	List<Nota> getNotesByUser(String user);
 	Optional<Nota> getNoteById(Long id);
 	void saveNota(Nota nota);
