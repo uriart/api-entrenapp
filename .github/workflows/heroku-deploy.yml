@@ -27,18 +27,18 @@ jobs:
       - name: Build with Maven
         run: mvn --batch-mode --update-snapshots package
           
-  deploy:
-    needs: [build_and_tests]
-    runs-on: ubuntu-18.04
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-      - name: Deploy to Heroku
-        uses: akhileshns/heroku-deploy@v3.12.12
-        with:
-          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: ${{secrets.HEROKU_APP}}
-          heroku_email: ${{secrets.HEROKU_API_EMAIL}}
-          healthcheck: "https://${{secrets.HEROKU_APP}}.herokuapp.com/swagger-ui.html"
-          rollbackonhealthcheckfailed: true
+    #  deploy:
+    #    needs: [build_and_tests]
+    #    runs-on: ubuntu-18.04
+        #    steps:
+        #      - uses: actions/checkout@v2
+          #        with:
+        #          fetch-depth: 0
+        #      - name: Deploy to Heroku
+        #        uses: akhileshns/heroku-deploy@v3.12.12
+          #        with:
+          #          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          #          heroku_app_name: ${{secrets.HEROKU_APP}}
+          #          heroku_email: ${{secrets.HEROKU_API_EMAIL}}
+          #          healthcheck: "https://${{secrets.HEROKU_APP}}.herokuapp.com/swagger-ui.html"
+#          rollbackonhealthcheckfailed: true
