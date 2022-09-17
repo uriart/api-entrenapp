@@ -3,7 +3,7 @@
 #
 spring:
   datasource:
-    url: jdbc:${DATABASE_URL}
+    url: jdbc:postgres:as1w4HfnH0UB7AFWN36S@containers-us-west-90.railway.app:7419/railway
     username: ${JDBC_DATABASE_USERNAME}
     password: ${JDBC_DATABASE_PASSWORD}
   jpa:
