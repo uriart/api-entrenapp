@@ -3,7 +3,8 @@
 #
 spring:
   datasource:
-    url: jdbc:postgres:as1w4HfnH0UB7AFWN36S@containers-us-west-90.railway.app:7419/railway
+    driverClassName: org.postgresql.Driver
+    url: ${DATABASE_URL}
     username: ${JDBC_DATABASE_USERNAME}
     password: ${JDBC_DATABASE_PASSWORD}
   jpa:
@@ -20,7 +21,6 @@ spring:
       resourceserver:
         jwt:
           issuer-uri: https://dev-r071w8pk.eu.auth0.com/
-
 auth0:
   audience: https://users-api-test2.herokuapp.com/
 
