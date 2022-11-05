@@ -3,4 +3,4 @@ BackEnd API con varias utilidades que permite generar un programa de entrenamien
 
 Proyecto con sistema de integración continua de github actions. Pipeline.yml (build - test - deploy)
 
-https://api-train-program.herokuapp.com/swagger-ui.html
+https://api-train-program.up.railway.app/swagger-ui.html
