@@ -26,4 +26,5 @@ spring:
           issuer-uri: https://dev-r071w8pk.eu.auth0.com/
 auth0:
   audience: https://users-api-test2.herokuapp.com/
-
+server:
+  port: 8081
