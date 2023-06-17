@@ -1,7 +1,3 @@
 FROM openjdk:11
-EXPOSE 8080
-
-COPY ./build/libs/api-train-program-0.0.1-SNAPSHOT.jar /usr/app/api-train-program.jar
-WORKDIR /usr/app
-
+ADD target/api-train-program-0.0.1-SNAPSHOT.jar api-train-program.jar
 ENTRYPOINT ["java", "-jar", "api-train-program.jar"]
