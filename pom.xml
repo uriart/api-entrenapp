@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.grupo</groupId>
-    <artifactId>apirest</artifactId>
+    <artifactId>api-train-program</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>apirest</name>
+    <name>api-train-program</name>
     <description>Spring boot api powerlifting program</description>
 
     <properties>
