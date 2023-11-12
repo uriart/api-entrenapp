@@ -23,6 +23,6 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: https://dev-r071w8pk.eu.auth0.com/
+          issuer-uri: ${AUTH_ISSUER}
 auth0:
-  audience: https://users-api-test2.herokuapp.com/
+  audience: ${AUTH_AUDIENCE}
