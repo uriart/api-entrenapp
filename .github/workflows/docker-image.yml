@@ -34,4 +34,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: uriart/api-train-program:1.0.0
+          tags: uriart/api-entrenapp:1.0.0
