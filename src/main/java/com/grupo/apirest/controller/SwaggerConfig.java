@@ -36,16 +36,7 @@ public class SwaggerConfig {
                 .apis(RequestHandlerSelectors.any())
                 .paths(PathSelectors.regex("/powerlifting/.*"))
                 .build()
-                .groupName("programa-powerlifting");
+                .groupName("api-entrenapp");
     }
 
-    /**
-     * Info del API
-     */
-    private ApiInfo informacionApi(String titulo) {
-        return new ApiInfoBuilder()
-                .title("Aplicación API")
-                .description(titulo)
-                .build();
-    }
 }

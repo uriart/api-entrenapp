@@ -16,13 +16,8 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         jdbc:
           time_zone: UTC
-  devtools:
-    livereload:
-      enabled: false
   security:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: ${AUTH_ISSUER}
-auth0:
-  audience: ${AUTH_AUDIENCE}
+          jwk-set-uri: ${AUTHENTICATION_SERVER_URL}/auth/jwt/jwks.json
