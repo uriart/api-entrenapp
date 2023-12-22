@@ -1,0 +1,5 @@
+api_entrenapp_image: uriart/api-entrenapp
+api_entrenapp_version: 1.0.0
+namespace: entrenapp
+database_name: entrenappdb
+pvc_name: postgres-pvc

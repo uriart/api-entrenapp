@@ -1,0 +1,4 @@
+apiVersion: v1
+description: api-entrenapp Helm chart
+name: chart-api-entrenapp
+version: 1.0.0

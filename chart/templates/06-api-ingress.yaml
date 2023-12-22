@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-entrenapp-api
+  namespace: entrenapp
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: $1
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: uriart.sytes.net
+    http:
+      paths:
+      - path: /api(.*)
+        pathType: ImplementationSpecific
+        backend:
+          service:
+            name: api-entrenapp-service
+            port: 
+              number: 8080
+  tls:
+  - hosts:
+    - uriart.sytes.net
+    secretName: cert-tls
