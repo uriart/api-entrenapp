@@ -36,7 +36,8 @@ public class SwaggerConfig {
                 .apis(RequestHandlerSelectors.any())
                 .paths(PathSelectors.regex("/powerlifting/.*"))
                 .build()
-                .groupName("api-entrenapp");
+                .groupName("api-entrenapp")
+                .pathMapping("/api");
     }
 
 }
