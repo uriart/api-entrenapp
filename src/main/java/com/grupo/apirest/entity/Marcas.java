@@ -5,7 +5,7 @@ import com.grupo.apirest.enums.EjerciciosEnum;
 import com.grupo.apirest.util.Constantes;
 import lombok.Data;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.Date;
 
 @Entity

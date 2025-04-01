@@ -1,9 +1,5 @@
 package com.grupo.apirest.entity.program;
 
-import lombok.Data;
+import java.util.List;
 
-public @Data
-class EjercicioModel {
-    private String nombreEjercicio;
-    private SeriesModel[] series;
-}
+public record EjercicioModel(String nombreEjercicio, List<SeriesModel> series) {}

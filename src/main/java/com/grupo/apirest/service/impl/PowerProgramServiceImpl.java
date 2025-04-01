@@ -6,7 +6,6 @@ import com.grupo.apirest.entity.Nota;
 import com.grupo.apirest.entity.program.ProgramaPowerlifting;
 import com.grupo.apirest.exception.ApiRequestException;
 import com.grupo.apirest.service.IPowerProgramService;
-import javassist.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

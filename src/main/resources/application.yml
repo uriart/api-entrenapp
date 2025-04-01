@@ -13,7 +13,7 @@ spring:
       ddl-auto: update
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
+        #dialect: org.hibernate.dialect.PostgreSQLDialect
         jdbc:
           time_zone: UTC
   security:
@@ -21,3 +21,9 @@ spring:
       resourceserver:
         jwt:
           jwk-set-uri: ${AUTHENTICATION_SERVER_URL}/auth/jwt/jwks.json
+
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true

@@ -8,7 +8,7 @@ import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import javax.persistence.EntityManager;
+import jakarta.persistence.EntityManager;
 import java.util.List;
 import java.util.Optional;
 
@@ -22,15 +22,17 @@ public class PowerProgramDAOImpl implements IPowerProgramDAO {
 
     @Override
     public Marcas saveMarcas(Marcas marcas) {
-        Session currentSession = entityManager.unwrap(Session.class);
-        currentSession.saveOrUpdate(marcas);
+        try(Session currentSession = entityManager.unwrap(Session.class)) {
+            currentSession.saveOrUpdate(marcas);
+        }
         return marcas;
     }
 
     @Override
     public Marcas findByUser(String user) {
-        Session currentSession = entityManager.unwrap(Session.class);
-        return currentSession.get(Marcas.class, user);
+        try(Session currentSession = entityManager.unwrap(Session.class)) {
+            return currentSession.get(Marcas.class, user);
+        }
     }
 
     @Override
